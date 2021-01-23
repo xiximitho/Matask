@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Header, Title, Button, Left, Right, Body, Icon, Content, Accordion } from "native-base";
+import { Container, Header, Title, Button, Left, Right, Body, Icon, Content, Accordion, Text } from "native-base";
 import {List, Checkbox} from 'react-native-paper'
 
 const dataArray = [
@@ -10,7 +10,9 @@ const dataArray = [
   class AccordionDefault extends Component {
     render() {
       return (
+        
         <Container>
+          <Text>asdasd</Text>
         <List.Section title="Accordions">
         <List.Accordion
         title=""
