@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Container, Header, Title, Button, Left, Right, Body, Icon, Content, Accordion } from "native-base";
+import {List, Checkbox} from 'react-native-paper'
+
 const dataArray = [
     { title: "First Element", content: "Lorem ipsum dolor sit amet" },
     { title: "Second Element", content: "Lorem ipsum dolor sit amet" },
@@ -9,21 +11,23 @@ const dataArray = [
     render() {
       return (
         <Container>
-          <Header>
-            <Left>
-              <Button transparent onPress={() => this.props.navigation.goBack()}>
-                <Icon name="arrow-back" />
-              </Button>
-            </Left>
-            <Body>
-              <Title>Default</Title>
-            </Body>
-            <Right />
-          </Header>
-          <Content padder style={{ backgroundColor: "white" }}>
-            <Accordion dataArray={dataArray} animation={false} expanded={0} />
-          </Content>
-        </Container>
+        <List.Section title="Accordions">
+        <List.Accordion
+        title=""
+        left={props => <List.Icon {...props} icon="folder" />}>
+          <List.Item title="First item" />
+          <List.Item title="Second item" description="dasdasdas" />
+          <Checkbox></Checkbox>
+      </List.Accordion>
+
+      <List.Accordion
+        title="Controlled Accordion"
+        left={props => <List.Icon {...props} icon="folder" />}>
+        <List.Item title="First item" />
+        <List.Item title="Second item" />
+      </List.Accordion>
+      </List.Section>
+      </Container>
       );
     }
   }

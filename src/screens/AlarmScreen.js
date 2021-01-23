@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
-import { Container, Header, Content, Footer, FooterTab, Button, Icon } from 'native-base';
+import {Component } from 'react-native';
+import { Container, Header, Content, Footer, FooterTab, Button , Icon, View, Text } from 'native-base';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -8,20 +8,20 @@ export default function Alarms({ navigation }) {
     return (
       <Container>
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Alarms</Text>
+        <Text>Alarms</Text>  
       </View>
       <Footer>
         <FooterTab>
-        <Button vertical  onPress={() => navigation.push('Tasks')}>
-              <Icon name="person" />
+        <Button vertical  onPress={() => navigation.navigate('Tasks')}>
+              <Icon type="FontAwesome5" name="tasks" />
               <Text>Tasks</Text>
         </Button>
-        <Button vertical active onPress={() => navigation.push('Alarms')}>
-              <Icon name="person" />
+        <Button vertical active onPress={() => navigation.navigate('Alarms')}>
+              <Icon type="FontAwesome5" name="business-time" />
               <Text>Alarms</Text>
         </Button>
-        <Button vertical onPress={() => navigation.push('Notes')}>
-              <Icon name="person" />
+        <Button vertical onPress={() => navigation.navigate('Notes')}>
+              <Icon type="FontAwesome5" name="sticky-note" />
               <Text>Notes</Text>
         </Button>
           </FooterTab> 
