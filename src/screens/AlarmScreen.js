@@ -14,15 +14,15 @@ export default function Alarms({ navigation }) {
         <FooterTab>
         <Button vertical  onPress={() => navigation.navigate('Tasks')}>
               <Icon type="FontAwesome5" name="tasks" />
-              <Text>Tasks</Text>
+              <Text>Tarefas</Text>
         </Button>
         <Button vertical active onPress={() => navigation.navigate('Alarms')}>
               <Icon type="FontAwesome5" name="business-time" />
-              <Text>Alarms</Text>
+              <Text>Compromissos</Text>
         </Button>
         <Button vertical onPress={() => navigation.navigate('Notes')}>
               <Icon type="FontAwesome5" name="sticky-note" />
-              <Text>Notes</Text>
+              <Text>Notas</Text>
         </Button>
           </FooterTab> 
           </Footer>
