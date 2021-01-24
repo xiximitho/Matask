@@ -9,7 +9,8 @@ const MyComponent = () => {
   return (
       <View style={{flex:0.190, alignContent:'flex-end', justifyContent:'center'}}>
     <Checkbox.Item
-    style={{}}
+    uncheckedColor={'#000000'}
+    color={'#000000'}
       status={checked ? 'checked' : 'unchecked'}
       onPress={() => {
         setChecked(!checked);
